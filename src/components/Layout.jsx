@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Sun, Moon } from "lucide-react";
-import profileImage from "/assets/profile.jpg";
+import { Sun, Moon, Globe } from "lucide-react";
+import profileImage from './assets/profile.jpg'; // Perbaikan disini
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
   Home,
@@ -8,9 +8,7 @@ import {
   Award,
   Briefcase,
   LayoutDashboard,
-  MessageCircle,
   Mail,
-  Globe,
 } from "lucide-react";
 
 const Layout = () => {
@@ -18,7 +16,7 @@ const Layout = () => {
 
   const [language, setLanguage] = useState("en");
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Tambahan untuk mobile menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "en" ? "id" : "en"));
@@ -84,24 +82,23 @@ const Layout = () => {
 
       {/* Sidebar untuk Mobile (Overlay) */}
       {isMenuOpen && (
-  <div
-    className="fixed inset-0 z-50 bg-black bg-opacity-70 flex md:hidden"
-    onClick={() => setIsMenuOpen(false)} // klik area luar sidebar
-  >
-    <div
-      className="w-64 bg-black p-6 flex flex-col h-full"
-      onClick={(e) => e.stopPropagation()} // cegah close jika klik di dalam
-    >
-      <SidebarContent
-        toggleLanguage={toggleLanguage}
-        toggleTheme={toggleTheme}
-        language={language}
-        isDarkMode={isDarkMode}
-      />
-    </div>
-  </div>
-)}
-
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-70 flex md:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <div
+            className="w-64 bg-black p-6 flex flex-col h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <SidebarContent
+              toggleLanguage={toggleLanguage}
+              toggleTheme={toggleTheme}
+              language={language}
+              isDarkMode={isDarkMode}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Main Content */}
       <div className="md:ml-64 p-8 overflow-y-auto h-screen">
@@ -119,7 +116,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
       <div className="p-6 flex flex-col items-center">
         <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
           <img
-            src="/src/assets/profile.jpg"
+            src={profileImage} // Pakai profileImage yang sudah diimport
             alt="Profile"
             className="w-full h-full object-cover"
           />
@@ -156,7 +153,6 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
           { to: "/achievements", label: "Achievements", icon: Award },
           { to: "/projects", label: "Projects", icon: Briefcase },
           { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-          
           { to: "/contact", label: "Contact", icon: Mail },
         ].map(({ to, label, icon: Icon }) => (
           <NavLink
