@@ -71,7 +71,7 @@ const About = () => {
       duration: "2 months",
       type: "Temporary",
       mode: "Onsite",
-      logo: "/src/assets/kpu-logo.png",
+      logo: "/src/public/kpu-logo.png",
       responsibilities: [
         "Memotret formulir C1 plano yang memuat hasil penghitungan suara.",
         "Mengunggah foto formulir ke aplikasi SIREKAP KPU.",
