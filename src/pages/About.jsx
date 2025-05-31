@@ -23,7 +23,7 @@ const About = () => {
       degree: "Diploma, Teknologi Komputer · GPA 3.79/4.00",
       period: "2023 - 2026",
       location: "Bantul, Daerah Istimewa Yogyakarta",
-      logo: "/src/assets/utdi-logo.png",
+      logo: "/src/public/utdi-logo.png",
       responsibilities: [
         "Meraih Juara 2 dalam lomba desain poster tingkat mahasiswa bertema Keselamatan dan Kesehatan Kerja (K3).",
         "Aktif mengikuti seminar dan workshop pengembangan teknologi komputer, keamanan jaringan, dan inovasi digital.",
@@ -54,7 +54,7 @@ const About = () => {
       duration: null,
       type: "Part-time",
       mode: "Onsite",
-      logo: "/src/assets/himatekkom-logo.png",
+      logo: "/src/public/himatekkom-logo.png",
       responsibilities: [
         "Menyusun dan mengirimkan surat kerja sama, undangan, dan proposal ke instansi eksternal.",
         "Mengelola media sosial HIMATEKKOM untuk publikasi kegiatan dan informasi penting.",
@@ -86,7 +86,7 @@ const About = () => {
       duration: "4 months",
       type: "Part-time",
       mode: "Onsite",
-      logo: "/src/assets/shopee-logo.png",
+      logo: "/src/public/shopee-logo.png",
       responsibilities: [
         "Mengelompokkan paket berdasarkan kode pengiriman, alamat tujuan, dan metode pengiriman.",
         "Menyusun paket sesuai rute distribusi untuk memudahkan proses pengantaran.",
@@ -101,7 +101,7 @@ const About = () => {
       duration: "4 months",
       type: "Internship",
       mode: "Onsite",
-      logo: "/src/assets/diskominfo-logo.png",
+      logo: "/src/public/diskominfo-logo.png",
       responsibilities: [
         "Memperbaiki dan mengganti kabel jaringan yang rusak di sepanjang jalan dan titik layanan publik.",
         "Melakukan pengecekan konektivitas dan kestabilan jaringan pasca-perbaikan.",
@@ -140,7 +140,7 @@ const About = () => {
           
           <div className="flex flex-wrap gap-1 mt-4">
             <a
-              href="/src/assets/As'ad Mahmud Akram_Portofolio.pdf"
+              href="/src/public/As'ad Mahmud Akram_Portofolio.pdf"
               download
               className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 py-1 rounded hover:bg-gray-700 transition flex items-center gap-1"
             >
@@ -149,7 +149,7 @@ const About = () => {
               Portfolio
             </a>
             <a
-              href="/src/assets/As'ad Mahmud Akram_CV.pdf"
+              href="/src/public/As'ad Mahmud Akram_CV.pdf"
               download
               className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 py-1 rounded hover:bg-gray-700 transition flex items-center gap-1"
             >
