@@ -38,7 +38,7 @@ const Layout = () => {
       <div className="md:hidden flex items-center justify-between bg-black text-white px-5 py-3">
         <div className="flex items-center gap-2">
           <img
-            src="/src/assets/profile.jpg"
+            src="../src/assets/profile.jpg"
             alt="Profile"
             className="w-8 h-8 rounded-full object-cover"
           />
