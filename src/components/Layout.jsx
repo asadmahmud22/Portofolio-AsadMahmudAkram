@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Sun, Moon } from "lucide-react";
-import { profileImage } from '/assets/profile.jpg';
+import profileImage from '/assets/profile.jpg';
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
   Home,
