@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Sun, Moon } from "lucide-react";
+import { profileImage } from '/assets/profile.jpg';
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
   Home,
@@ -38,7 +39,7 @@ const Layout = () => {
       <div className="md:hidden flex items-center justify-between bg-black text-white px-5 py-3">
         <div className="flex items-center gap-2">
           <img
-            src="/assets/profile.jpg"
+            src={profileImage}
             alt="Profile"
             className="w-8 h-8 rounded-full object-cover"
           />
