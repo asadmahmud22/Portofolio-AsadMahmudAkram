@@ -18,6 +18,7 @@ const projects = [
     image: "/projects/online-exam.png",
     tech: ["html", "css", "js", "php", "mysql", "infinity"],
     featured: true,
+    link: "https://asadmahmud.42web.io/index.php",
   },
   {
     title: "Design UI/UX APP Store Shoes",
@@ -26,6 +27,7 @@ const projects = [
     image: "/projects/app-shoes.png",
     tech: ["figma"],
     featured: true,
+    link: "",
   },
 
 ];
