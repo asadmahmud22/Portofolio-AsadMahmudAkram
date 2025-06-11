@@ -114,27 +114,37 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
   return (
     <>
       <div className="p-6 flex flex-col items-center">
-        <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
+        {/* Foto profil */}
+        <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-gray-700">
           <img
-            src="/assets/profile.jpg" // ⬅️ Path dari folder `public/assets`
+            src="/assets/profile.jpg"
             alt="Profile"
             className="w-full h-full object-cover"
           />
         </div>
-        <h2 className="text-xl font-bold">As'ad Mahmud</h2>
-        <div className="text-gray-400 text-sm">@asadmahmudakram</div>
 
-        <div className="flex items-center gap-3 mt-2">
-          <button className="hire-me-btn flex items-center gap-2">
+        {/* Informasi profil lengkap */}
+        <h2 className="text-xl font-bold">As'ad Mahmud Akram</h2>
+        <div className="text-gray-400 text-sm mb-1">@asadmahmudakram</div>
+        <div className="text-gray-500 text-sm mb-1">📧 asad.mahmud@example.com</div>
+        <div className="text-gray-500 text-sm mb-1">📍 Yogyakarta, Indonesia</div>
+        <div className="text-green-500 text-xs mt-1 flex items-center gap-1">
+          <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          Available for work
+        </div>
+
+        {/* Tombol pengaturan */}
+        <div className="flex items-center gap-3 mt-4">
+          <button className="hire-me-btn flex items-center gap-2 text-sm border border-green-500 px-3 py-1 rounded-full hover:bg-green-600/20">
             <div className="status-indicator w-2 h-2 rounded-full bg-green-500"></div>
-            Hire me.
+            Hire me
           </button>
 
           <button
             onClick={toggleLanguage}
             className="text-gray-400 text-sm border border-gray-700 rounded-full px-3 py-1 hover:bg-gray-700/50 transition"
           >
-            {language === "en" ? "us" : "id"}
+            {language === "en" ? "US" : "ID"}
           </button>
 
           <button
@@ -146,7 +156,8 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
         </div>
       </div>
 
-      <nav className="mt-2 flex-2">
+      {/* Navigasi */}
+      <nav className="mt-4 flex-2 w-full">
         {[
           { to: "/", label: "Home", icon: Home },
           { to: "/about", label: "About", icon: User },
@@ -169,7 +180,8 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
         ))}
       </nav>
 
-      <div className="p-6 text-gray-400 text-xs">
+      {/* Footer */}
+      <div className="p-6 text-gray-400 text-xs text-center">
         <div>COPYRIGHT © 2025</div>
         <div>As'ad Mahmud Akram. All rights reserved.</div>
       </div>
