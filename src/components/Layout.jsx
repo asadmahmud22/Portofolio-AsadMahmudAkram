@@ -116,7 +116,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
       <div className="p-6 flex flex-col items-center">
         <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
           <img
-            src={profileImage} // Pakai profileImage yang sudah diimport
+            src="/assets/profile.jpg" // ⬅️ Path dari folder `public/assets`
             alt="Profile"
             className="w-full h-full object-cover"
           />
