@@ -119,7 +119,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
           <img
             src="/assets/profile.jpg"
             alt="Profile"
-            className="w-full h-full object-cover"
+            className="w-8 h-8 object-cover"
           />
         </div>
 
