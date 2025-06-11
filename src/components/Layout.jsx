@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Sun, Moon, Globe } from "lucide-react";
-import profileImage from './assets/profile.jpg'; // Perbaikan disini
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
   Home,
@@ -10,6 +9,8 @@ import {
   LayoutDashboard,
   Mail,
 } from "lucide-react";
+
+const profileImage = "/assets/profile.jpg"; // Perbaikan disini
 
 const Layout = () => {
   const location = useLocation();
@@ -119,7 +120,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
           <img
             src="/assets/profile.jpg"
             alt="Profile"
-            className="w-8 h-8 object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 
