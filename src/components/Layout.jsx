@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sun, Moon, Globe } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
   Home,
@@ -7,17 +7,19 @@ import {
   Award,
   Briefcase,
   LayoutDashboard,
+  MessageCircle,
   Mail,
+  Globe,
 } from "lucide-react";
 
-const profileImage = "/assets/profile.jpg"; // Perbaikan disini
+const profileImage = "/assets/profile.jpg";
 
 const Layout = () => {
   const location = useLocation();
 
   const [language, setLanguage] = useState("en");
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Tambahan untuk mobile menu
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "en" ? "id" : "en"));
@@ -38,7 +40,7 @@ const Layout = () => {
       <div className="md:hidden flex items-center justify-between bg-black text-white px-5 py-3">
         <div className="flex items-center gap-2">
           <img
-            src={profileImage}
+            src="/public/assets/profile.jpg"
             alt="Profile"
             className="w-8 h-8 rounded-full object-cover"
           />
@@ -83,23 +85,24 @@ const Layout = () => {
 
       {/* Sidebar untuk Mobile (Overlay) */}
       {isMenuOpen && (
-        <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-70 flex md:hidden"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          <div
-            className="w-64 bg-black p-6 flex flex-col h-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <SidebarContent
-              toggleLanguage={toggleLanguage}
-              toggleTheme={toggleTheme}
-              language={language}
-              isDarkMode={isDarkMode}
-            />
-          </div>
-        </div>
-      )}
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-70 flex md:hidden"
+    onClick={() => setIsMenuOpen(false)} // klik area luar sidebar
+  >
+    <div
+      className="w-64 bg-black p-6 flex flex-col h-full"
+      onClick={(e) => e.stopPropagation()} // cegah close jika klik di dalam
+    >
+      <SidebarContent
+        toggleLanguage={toggleLanguage}
+        toggleTheme={toggleTheme}
+        language={language}
+        isDarkMode={isDarkMode}
+      />
+    </div>
+  </div>
+)}
+
 
       {/* Main Content */}
       <div className="md:ml-64 p-8 overflow-y-auto h-screen">
@@ -115,35 +118,27 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
   return (
     <>
       <div className="p-6 flex flex-col items-center">
-        {/* Foto profil */}
-        <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-gray-700">
+        <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
           <img
-            src="/assets/profile.jpg"
+            src="/public/assets/profile.jpg"
             alt="Profile"
             className="w-full h-full object-cover"
           />
         </div>
+        <h2 className="text-xl font-bold">As'ad Mahmud</h2>
+        <div className="text-gray-400 text-sm">@asadmahmudakram</div>
 
-        {/* Informasi profil lengkap */}
-        <h2 className="text-xl font-bold">As'ad Mahmud Akram</h2>
-        <div className="text-gray-400 text-sm mb-1">asadmahmudakram@gmail.com</div>
-        <div className="text-green-500 text-xs mt-1 flex items-center gap-1">
-          <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-          Available for work
-        </div>
-
-        {/* Tombol pengaturan */}
-        <div className="flex items-center gap-3 mt-4">
-          <button className="hire-me-btn flex items-center gap-2 text-sm border border-green-500 px-3 py-1 rounded-full hover:bg-green-600/20">
+        <div className="flex items-center gap-3 mt-2">
+          <button className="hire-me-btn flex items-center gap-2">
             <div className="status-indicator w-2 h-2 rounded-full bg-green-500"></div>
-            Hire me
+            Hire me.
           </button>
 
           <button
             onClick={toggleLanguage}
             className="text-gray-400 text-sm border border-gray-700 rounded-full px-3 py-1 hover:bg-gray-700/50 transition"
           >
-            {language === "en" ? "US" : "ID"}
+            {language === "en" ? "us" : "id"}
           </button>
 
           <button
@@ -155,14 +150,14 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
         </div>
       </div>
 
-      {/* Navigasi */}
-      <nav className="mt-4 flex-2 w-full">
+      <nav className="mt-2 flex-2">
         {[
           { to: "/", label: "Home", icon: Home },
           { to: "/about", label: "About", icon: User },
           { to: "/achievements", label: "Achievements", icon: Award },
           { to: "/projects", label: "Projects", icon: Briefcase },
           { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+          
           { to: "/contact", label: "Contact", icon: Mail },
         ].map(({ to, label, icon: Icon }) => (
           <NavLink
@@ -179,8 +174,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
         ))}
       </nav>
 
-      {/* Footer */}
-      <div className="p-6 text-gray-400 text-xs text-center">
+      <div className="p-6 text-gray-400 text-xs">
         <div>COPYRIGHT © 2025</div>
         <div>As'ad Mahmud Akram. All rights reserved.</div>
       </div>
