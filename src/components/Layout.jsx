@@ -40,10 +40,10 @@ const Layout = () => {
       <div className="md:hidden flex items-center justify-between bg-black text-white px-5 py-3">
         <div className="flex items-center gap-2">
           <img
-            src="/public/assets/profile.jpg"
-            alt="Profile"
-            className="w-8 h-8 rounded-full object-cover"
-          />
+  src={profileImage}
+  alt="Profile"
+  className="w-8 h-8 rounded-full object-cover"
+/>
           <span className="font-semibold">As'ad Mahmud A</span>
           <span className="text-blue-900">✔</span>
         </div>
@@ -120,7 +120,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
       <div className="p-6 flex flex-col items-center">
         <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
           <img
-            src="/public/assets/profile.jpg"
+            src={profileImage}
             alt="Profile"
             className="w-full h-full object-cover"
           />
