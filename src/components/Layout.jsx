@@ -126,9 +126,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
 
         {/* Informasi profil lengkap */}
         <h2 className="text-xl font-bold">As'ad Mahmud Akram</h2>
-        <div className="text-gray-400 text-sm mb-1">@asadmahmudakram</div>
-        <div className="text-gray-500 text-sm mb-1">📧 asad.mahmud@example.com</div>
-        <div className="text-gray-500 text-sm mb-1">📍 Yogyakarta, Indonesia</div>
+        <div className="text-gray-400 text-sm mb-1">asadmahmudakram@gmail.com</div>
         <div className="text-green-500 text-xs mt-1 flex items-center gap-1">
           <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
           Available for work
