@@ -29,7 +29,34 @@ const projects = [
     featured: true,
     link: "",
   },
-
+  {
+    title: "SiDompet - Aplikasi Pengelolaan Keuangan SiDompet",
+    description: "SiDompet adalah aplikasi mobile sederhana untuk mencatat dan mengelola pemasukan serta pengeluaran harian pengguna. Dibangun menggunakan Kotlin dengan database SQLite, aplikasi ini dirancang untuk membantu pengguna dalam merencanakan dan memantau kondisi keuangan pribadi secara efisien.",
+    image: "/projects/app-SiDompet.png",
+    tech: ["kotlin", "sqlite"],
+    link: "#",
+  },
+  {
+    title: "Website MyLinksPage",
+    description: "Website sederhana yang menampilkan tautan pribadi pengguna dalam satu halaman, menyerupai layanan Linktree. Dibuat menggunakan HTML, CSS, dan JavaScript, website ini cocok untuk menampilkan semua akun media sosial atau portofolio secara ringkas dan mudah diakses.",
+    image: "/projects/my-link.png",
+    tech: ["html", "css","js"],
+    link: "https://my-link-lemon.vercel.app/",
+  },
+  {
+    title: "Website tampilan Katalog Kopi",
+    description: "Sebuah website katalog sederhana bertema kopi, menampilkan berbagai jenis produk kopi beserta deskripsi singkatnya. Dibangun menggunakan HTML dan CSS, tampilan website ini dirancang untuk menarik minat pengunjung dengan desain minimalis dan modern.",
+    image: "/projects/kopi-senja.png",
+    tech: ["html", "css"],
+    link: "https://kopisenja-rouge.vercel.app/",
+  },
+  {
+    title: "Website tampilan Kuliner Khas Jogja",
+    description: "Website informatif yang menampilkan beragam kuliner khas Yogyakarta. Dibuat menggunakan HTML dan CSS, proyek ini bertujuan untuk memperkenalkan makanan tradisional Jogja dengan visual menarik dan layout sederhana.",
+    image: "/projects/kuliner-khas-jogja.png",
+    tech: ["html", "css"],
+    link: "https://kuliner-jogja-rho.vercel.app/",
+  },
 ];
 
 const techIcons = {
@@ -49,6 +76,7 @@ const techIcons = {
   vite: "/icons/vite.svg",
   kotlin: "/icons/kotlin.svg",
   figma: "/icons/figma.svg",
+  sqlite: "/icons/sqlite.svg",
 };
 
 const Projects = () => {
@@ -68,7 +96,7 @@ const Projects = () => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-md mb-3"
+              className="w-full h-45 object-cover rounded-md mb-3"
             />
 
             {project.featured && (
@@ -78,7 +106,7 @@ const Projects = () => {
               </div>
             )}
 
-            <h3 className="text-base font-semibold">{project.title}</h3>
+            <h3 className="text-md font-semibold">{project.title}</h3>
             <p className="text-sm text-gray-400 mt-1">{project.description}</p>
 
             <div className="flex flex-wrap gap-2 mt-3">
@@ -92,6 +120,17 @@ const Projects = () => {
                 />
               ))}
             </div>
+            {project.link && project.link !== "#" && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 mt-3 text-sm text-blue-400 hover:underline"
+              >
+                <Link size={14} />
+                Visit Project
+              </a>
+            )}
           </div>
         ))}
       </div>
