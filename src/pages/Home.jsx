@@ -98,6 +98,10 @@ const Home = () => {
           <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-left leading-tight">
             Hi, I'm As'ad Mahmud Akram
           </h1>
+          
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-left leading-tight">
+            Frontend Developer
+          </h2>
 
           <div className="flex flex-col sm:flex-row sm:gap-6 text-gray-400 mb-4 text-left text-sm">
             <div className="flex items-center gap-2 justify-start mb-1 sm:mb-0">
