@@ -1,4 +1,8 @@
-# React + Vite
+# 🌐 Portofolio Asad Mahmud Akram React + Vite
+Portofolio-AsadMahmudAkram adalah website portofolio pribadi bergaya Linktree yang dibuat menggunakan **React.js**, **Vite**, dan **Tailwind CSS**. Website ini menampilkan tautan penting seperti media sosial, proyek, dan kontak dalam satu halaman yang simpel, cepat, dan responsif.
+## 🔗 Live Preview
+
+👉 [Lihat Website](https://portofolio-asad-mahmud-akram.vercel.app/)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -79,9 +83,13 @@ The build artifacts will be stored in the `dist/` directory.
 ├── src/
 │   ├── assets/
 │   ├── components/
+|   |   |__ Layout.jsx
 │   ├── Pages/
 │   │   ├── About.jsx
-│   │   └── Home.jsx
+│   │   |── Home.jsx
+|   |   |__ Achivment.jsx
+|   |   |__ Project.jsx
+|   |   |__ Contact.jsx      
 │   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
@@ -98,4 +106,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-As'ad Mahmud Akram - [@asadmahmud](https://github.com/)
+As'ad Mahmud Akram - [@asadmahmud22](https://github.com/)
