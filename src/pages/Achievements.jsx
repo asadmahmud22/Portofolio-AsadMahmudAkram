@@ -38,6 +38,13 @@ const achievements = [
     link: "https://www.credly.com/badges/58e0d233-ad2a-4557-89da-718c50c48373/public_url",
   },
   {
+    title: "Introduction to UX Research",
+    org: "MySkill Short Class",
+    date: "July 2025",
+    img: "/certs/MySkill-Introduction-to-UX-Research.png",
+    link: "",
+  },
+  {
     title: "Wireframing in UI/UX Design",
     org: "MySkill Short Class",
     date: "May 2025",
