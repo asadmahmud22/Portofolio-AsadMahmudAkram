@@ -143,7 +143,8 @@ const achievements = [
   },
   {
     id: 16,
-    title:"Peserta Seminar Keamanan Siber di Era Digital Peluang dan Tantangan",
+    title:
+      "Peserta Seminar Keamanan Siber di Era Digital Peluang dan Tantangan",
     org: "CyberHub - In Universitas Teknologi Digital Indonesia",
     date: "Yogyakarta, 23 Maret 2024",
     img: "/certs/seminar-keamanan-siber-diera-digital-peluangdantantangan.png",
@@ -152,7 +153,7 @@ const achievements = [
   },
   {
     id: 17,
-    title:"Peserta Seminar Peluang dan Resiko Keuangan Digital",
+    title: "Peserta Seminar Peluang dan Resiko Keuangan Digital",
     org: "Universitas Teknologi Digital Indonesia",
     date: "Yogyakarta, 25 may 2025",
     img: "/certs/seminar-peluang-dan-resiko-keuangan-digital.png",
@@ -161,7 +162,8 @@ const achievements = [
   },
   {
     id: 18,
-    title:"Peserta Webinar How to Build a Strong Personal Branding on Linkedln",
+    title:
+      "Peserta Webinar How to Build a Strong Personal Branding on Linkedln",
     org: "TalentaHub - Indonesia",
     date: "Yogyakarta, 15 Maret 2025",
     img: "/certs/webinar-how-to-build-a-strong-personal-branding-on-linkedln.jpg",
@@ -170,7 +172,7 @@ const achievements = [
   },
   {
     id: 19,
-    title:"Webinar Nasional Inovasi Smart City Berbasis IoT",
+    title: "Webinar Nasional Inovasi Smart City Berbasis IoT",
     org: "Program Studi S1 Teknik Informatika Universitas Sains",
     date: "25 September 2024",
     img: "/certs/webinar-inovasi-smart-city-berbasis-iot.png",
@@ -179,7 +181,7 @@ const achievements = [
   },
   {
     id: 20,
-    title:"Soft Skill Webinar 5 Project Management",
+    title: "Soft Skill Webinar 5 Project Management",
     org: "DBS Foundation Coding Camp 2024",
     date: "Bandung, 12 Juni 2024",
     img: "/certs/soft-skill-webinar-5-project-management-dbs-foundation-coding.png",
@@ -188,7 +190,7 @@ const achievements = [
   },
   {
     id: 21,
-    title:"Soft Skill Webinar 7 Effective Communication",
+    title: "Soft Skill Webinar 7 Effective Communication",
     org: "DBS Foundation Coding Camp 2024",
     date: "Bandung, 26 Juni 2024",
     img: "/certs/soft-skill-webinar-7-effective-communication-dbs-foundation-coding-camp.png",
@@ -201,6 +203,7 @@ const achievements = [
 const Achievements = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("all");
+  const [modal, setModal] = useState(null); // menyimpan achievement yg sedang ditampilkan
 
   const filteredAchievements = achievements.filter(
     (ach) =>
@@ -209,33 +212,38 @@ const Achievements = () => {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 text-white">
+    <div className="max-w-6xl mx-auto px-4 py-10 text-white relative z-0">
       <h1 className="text-3xl font-bold mb-4">Achievements</h1>
       <p className="mb-6 text-gray-400">
         A collection of certificates and badges that I have earned throughout my
         journey.
       </p>
 
-      {/* Styled Filter Button Group */}
+      {/* Filter Buttons */}
       <div className="flex flex-wrap gap-3 mb-6">
-        {["all", "intern", "bootcamp", "competition", "organization","webinar and seminar"].map(
-          (cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium border ${
-                filter === cat
-                  ? "bg-white text-black"
-                  : "bg-white/5 text-white border-white/10"
-              } hover:bg-white/10 transition`}
-            >
-              {cat.charAt(0).toUpperCase() + cat.slice(1)}
-            </button>
-          )
-        )}
+        {[
+          "all",
+          "intern",
+          "bootcamp",
+          "competition",
+          "organization",
+          "webinar and seminar",
+        ].map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setFilter(cat)}
+            className={`px-4 py-1.5 rounded-full text-sm font-medium border ${
+              filter === cat
+                ? "bg-white text-black"
+                : "bg-white/5 text-white border-white/10"
+            } hover:bg-white/10 transition`}
+          >
+            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+          </button>
+        ))}
       </div>
 
-      {/* Search Input */}
+      {/* Search */}
       <div className="relative mb-8">
         <input
           type="text"
@@ -247,15 +255,13 @@ const Achievements = () => {
         <Search className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" />
       </div>
 
-      {/* Achievement Cards */}
+      {/* Grid Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredAchievements.map((ach) => (
-          <a
+          <div
             key={ach.id}
-            href={ach.link || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block bg-white/5 border border-white/10 rounded-lg overflow-hidden hover:scale-[1.02] transition-transform"
+            onClick={() => setModal(ach)}
+            className="cursor-pointer block bg-white/5 border border-white/10 rounded-lg overflow-hidden hover:scale-[1.02] transition-transform"
           >
             <img
               src={ach.img}
@@ -267,12 +273,18 @@ const Achievements = () => {
               <p className="text-sm text-gray-300">{ach.org}</p>
               <p className="text-xs text-gray-400">{ach.date}</p>
               {ach.link && (
-                <p className="mt-1 text-blue-400 text-sm underline">
+                <a
+                  href={ach.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 text-blue-400 text-sm underline inline-block"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   Lihat Sertifikat
-                </p>
+                </a>
               )}
             </div>
-          </a>
+          </div>
         ))}
       </div>
 
@@ -281,6 +293,36 @@ const Achievements = () => {
         <p className="text-center text-gray-400 mt-10">
           Tidak ada data yang cocok.
         </p>
+      )}
+
+      {/* Modal */}
+      {modal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm"
+          onClick={() => setModal(null)}
+        >
+          <div
+            className="relative max-w-3xl w-full mx-4 bg-white rounded-lg overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-2 right-2 text-black hover:text-red-500"
+              onClick={() => setModal(null)}
+            >
+              <X size={24} />
+            </button>
+            <img
+              src={modal.img}
+              alt={modal.title}
+              className="w-full object-contain max-h-[90vh]"
+            />
+            <div className="p-4 text-black">
+              <h3 className="text-xl font-semibold">{modal.title}</h3>
+              <p className="text-sm">{modal.org}</p>
+              <p className="text-xs text-gray-600">{modal.date}</p>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
