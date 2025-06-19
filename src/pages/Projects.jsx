@@ -27,7 +27,7 @@ const projects = [
     image: "/projects/app-shoes.png",
     tech: ["figma"],
     featured: true,
-    link: "",
+    link: "https://www.figma.com/design/7ceElGN2RimU2X0ekNFn6e/UI-UX-Wireframe-for-Mobile-E-Commerce?node-id=0-1&t=4RZxXMDp6kqbzDfw-1",
   },
   {
     title: "SiDompet - Aplikasi Pengelolaan Keuangan SiDompet",
