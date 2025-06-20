@@ -70,7 +70,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-6">
+    <div className="min-h-screen bg-black text-white ">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">Contact</h1>
         <p className="text-gray-400 mb-6">Let's get in touch</p>
