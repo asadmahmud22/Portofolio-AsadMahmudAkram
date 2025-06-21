@@ -124,7 +124,7 @@ const Dashboard = () => {
       {/* Main Content */}
       <div className="px-3 md:px-1 lg:px-1 py-1 md:py-1 lg:py-1 max-w-4xl overflow-y-hidden mx-auto">
         {/* Dashboard Title */}
-        <div className="mb-4 md:mb-8">
+        <div className="mb-4 md:mb-8 text-center">
           <h1 className="text-lg md:text-2xl lg:text-3xl font-bold mb-1">
             Dashboard
           </h1>
