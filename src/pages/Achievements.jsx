@@ -213,7 +213,7 @@ const Achievements = () => {
 
   return (
     <div className="max-w-6xl mx-auto  text-white relative z-0">
-      <h1 className="text-3xl text-center font-bold mb-4">Achievements</h1>
+      <h1 className="text-3xl  font-bold mb-4 text-center">Achievements</h1>
       <p className="mb-6 text-gray-400 text-center">
         A collection of certificates and badges that I have earned throughout my
         journey.
@@ -227,7 +227,7 @@ const Achievements = () => {
           "bootcamp",
           "competition",
           "organization",
-          "webinar and seminar",
+          "webinar and Seminar",
         ].map((cat) => (
           <button
             key={cat}
