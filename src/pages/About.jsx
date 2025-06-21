@@ -1,4 +1,10 @@
 import { useState } from "react";
+import utdiLogo from "../assets/utdi-logo.png";
+import himatekkomLogo from "../assets/himatekkom-logo.png";
+import kpuLogo from "../assets/kpu-logo.png";
+import shopeeLogo from "../assets/shopee-logo.png";
+import diskominfoLogo from "../assets/diskominfo-logo.png";
+
 import { Briefcase, GraduationCap, Download } from "lucide-react";
 
 const About = () => {
@@ -23,7 +29,7 @@ const About = () => {
       degree: "Diploma, Teknologi Komputer · GPA 3.79/4.00",
       period: "2023 - 2026",
       location: "Bantul, Daerah Istimewa Yogyakarta",
-      logo: "/assets/utdi-logo.png",
+      logo: utdiLogo,
       responsibilities: [
         "Meraih Juara 2 dalam lomba desain poster tingkat mahasiswa bertema Keselamatan dan Kesehatan Kerja (K3).",
         "Aktif mengikuti seminar dan workshop pengembangan teknologi komputer, keamanan jaringan, dan inovasi digital.",
@@ -54,7 +60,7 @@ const About = () => {
       duration: null,
       type: "Part-time",
       mode: "Onsite",
-      logo: "/assets/himatekkom-logo.png",
+      logo: himatekkomLogo,
       responsibilities: [
         "Menyusun dan mengirimkan surat kerja sama, undangan, dan proposal ke instansi eksternal.",
         "Mengelola media sosial HIMATEKKOM untuk publikasi kegiatan dan informasi penting.",
@@ -71,7 +77,7 @@ const About = () => {
       duration: "2 months",
       type: "Temporary",
       mode: "Onsite",
-      logo: "/assets/kpu-logo.png",
+      logo: kpuLogo,
       responsibilities: [
         "Memotret formulir C1 plano yang memuat hasil penghitungan suara.",
         "Mengunggah foto formulir ke aplikasi SIREKAP KPU.",
@@ -86,7 +92,7 @@ const About = () => {
       duration: "4 months",
       type: "Part-time",
       mode: "Onsite",
-      logo: "/assets/shopee-logo.png",
+      logo: shopeeLogo,
       responsibilities: [
         "Mengelompokkan paket berdasarkan kode pengiriman, alamat tujuan, dan metode pengiriman.",
         "Menyusun paket sesuai rute distribusi untuk memudahkan proses pengantaran.",
@@ -101,7 +107,7 @@ const About = () => {
       duration: "4 months",
       type: "Internship",
       mode: "Onsite",
-      logo: "/assets/diskominfo-logo.png",
+      logo: diskominfoLogo,
       responsibilities: [
         "Memperbaiki dan mengganti kabel jaringan yang rusak di sepanjang jalan dan titik layanan publik.",
         "Melakukan pengecekan konektivitas dan kestabilan jaringan pasca-perbaikan.",
