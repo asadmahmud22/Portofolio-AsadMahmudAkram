@@ -81,9 +81,9 @@ const techIcons = {
 
 const Projects = () => {
   return (
-    <div className="text-white">
-      <h1 className="text-3xl font-bold mb-6">Projects</h1>
-      <p className="text-gray-400 mb-6">
+    <div className="text-white ">
+      <h1 className="text-3xl font-bold mb-6 text-center">Projects</h1>
+      <p className="text-gray-400 mb-6 text-center">
         Several projects that I have worked on, both private and open source.
       </p>
 
