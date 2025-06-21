@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import {
   Send,
   Instagram,
@@ -72,8 +72,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-black text-white ">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-3xl font-bold mb-2">Contact</h1>
-        <p className="text-gray-400 mb-6">Let's get in touch</p>
+        <h1 className="text-3xl text-center font-bold mb-2">Contact</h1>
+        <p className="text-gray-400 text-center mb-6">Let's get in touch</p>
         <hr className="border-gray-800 my-6" />
 
         {/* Social Media Section */}
