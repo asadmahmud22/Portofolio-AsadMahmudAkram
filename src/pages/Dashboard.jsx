@@ -124,11 +124,11 @@ const Dashboard = () => {
       {/* Main Content */}
       <div className="px-3 md:px-1 lg:px-1 py-1 md:py-1 lg:py-1 max-w-4xl overflow-y-hidden mx-auto">
         {/* Dashboard Title */}
-        <div className="mb-4 md:mb-8 text-center">
-          <h1 className="text-lg md:text-2xl lg:text-3xl font-bold mb-1">
+        <div className="mb-4 md:mb-8">
+          <h1 className="text-lg md:text-2xl text-center lg:text-3xl font-bold mb-1">
             Dashboard
           </h1>
-          <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
+          <p className="text-xs md:text-sm text-center text-gray-400 leading-relaxed">
             Built with Next.js API routes deployed as serverless functions.
           </p>
         </div>
