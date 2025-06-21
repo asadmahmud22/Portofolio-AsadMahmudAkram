@@ -5,7 +5,7 @@ const skills = [
   { name: "Html", color: "border-orange-500", logo: "/logos/html.svg" },
   { name: "JavaScript", color: "border-yellow-500", logo: "/logos/js.svg" },
   { name: "PHP", color: "border-blue-600", logo: "/logos/php.svg" },
-  { name: "Laravel", color: "border-red-600", logo: "/logos/laravel.svg" },
+  { name: "sqlite", color: "border-red-600", logo: "/logos/sqlite.svg" },
   { name: "Next.js", color: "border-green-500", logo: "/logos/nextjs.svg" },
   { name: "Vite", color: "border-purple-900", logo: "/logos/vite.svg" },
   { name: "GitHub", color: "border-gray-800", logo: "/logos/github.svg" },
@@ -16,6 +16,12 @@ const skills = [
     logo: "/logos/tailwind.svg",
   },
   { name: "CSS", color: "border-blue-500", logo: "/logos/css.svg" },
+  {
+    name: "Autoprefixer",
+    color: "border-blue-500",
+    logo: "/logos/autoprefixer.svg",
+  },
+  { name: "Mysql", color: "border-blue-500", logo: "/logos/mysql.svg" },
   { name: "Invinity", color: "border-purple-500", logo: "/logos/infinity.svg" },
   { name: "Eslint", color: "border-blue-500", logo: "/logos/eslint.svg" },
   { name: "Vercel", color: "border-purple-700", logo: "/logos/vercel.svg" },
@@ -95,13 +101,9 @@ const Home = () => {
 
         {/* Section Intro with consistent font sizes */}
         <div className="max-w-5xl mb-12">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-left leading-tight">
+          <h1 className="text-2xl text-left sm:text-3xl font-bold mb-2  leading-tight">
             Hi, I'm As'ad Mahmud Akram
           </h1>
-          
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-left leading-tight">
-            Frontend Developer
-          </h2>
 
           <div className="flex flex-col sm:flex-row sm:gap-6 text-gray-400 mb-4 text-left text-sm">
             <div className="flex items-center gap-2 justify-start mb-1 sm:mb-0">
@@ -221,7 +223,7 @@ const Home = () => {
                 project and bring your vision to life.
               </p>
               <a
-                href="/contact"
+                href="../contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 transform hover:scale-105 inline-block"
               >
                 Get In Touch
@@ -239,7 +241,7 @@ const Home = () => {
 
               <div className="flex gap-3">
                 <a
-                  href="/contact"
+                  href="../contact"
                   className="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 transform hover:scale-105 inline-block"
                 >
                   Connect
