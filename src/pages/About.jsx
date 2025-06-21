@@ -148,7 +148,7 @@ const About = () => {
             <a
               href="/src/assets/As'ad Mahmud Akram_Portofolio.pdf"
               download
-              className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 py-1 rounded hover:bg-gray-700 transition flex items-center gap-1"
+              className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 md:xs py-1 rounded-3xl hover:bg-gray-700 transition flex items-center gap-1"
             >
               <Download size={12} />
               <span className="hidden sm:inline">Download</span>
@@ -157,7 +157,7 @@ const About = () => {
             <a
               href="/src/assets/As'ad Mahmud Akram_CV.pdf"
               download
-              className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 py-1 rounded hover:bg-gray-700 transition flex items-center gap-1"
+              className="bg-gray-800 text-white text-xs md:text-sm px-2 md:px-3 md:xs py-1 rounded-3xl hover:bg-gray-700 transition flex items-center gap-1"
             >
               <Download size={12} />
               <span className="hidden sm:inline">Download</span>
