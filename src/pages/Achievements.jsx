@@ -75,7 +75,7 @@ const achievements = [
     category: "bootcamp",
   },
   {
-    id: 8,
+    id: 9,
     title: "Data Visualization with Looker Data Studio",
     org: "MySkill Short Class",
     date: "May 2025",
@@ -84,7 +84,7 @@ const achievements = [
     category: "bootcamp",
   },
   {
-    id: 9,
+    id: 10,
     title: "Guide to Learn SQL with AI at DQLab",
     org: "DQLab (berkolaborasi dengan Xeratic dan Universitas Multimedia Nusantara)",
     date: "05 Mei 2025",
@@ -93,7 +93,7 @@ const achievements = [
     category: "bootcamp",
   },
   {
-    id: 10,
+    id: 11,
     title:
       "Juara 2 Lomba Desain Poster bertema Keselamatan dan Kesehatan Kerja (K3)",
     org: "STIKES Mitra Husada Karanganyar",
@@ -103,7 +103,7 @@ const achievements = [
     category: "competition",
   },
   {
-    id: 11,
+    id: 12,
     title:
       "Peserta Lomba desain poster dengan tema “Keselamatan dan Kesehatan Kerja",
     org: "Himpunan Mahasiswa Program Studi Keselamatan dan Kesehatan Kerja (K3), STIKES Mitra Husada Karanganyar",
@@ -113,7 +113,7 @@ const achievements = [
     category: "competition",
   },
   {
-    id: 12,
+    id: 13,
     title: "Participant Infographic Poster, 4C National Competition 2024",
     org: " Universitas Brawijaya",
     date: "December 2025",
@@ -122,7 +122,7 @@ const achievements = [
     category: "competition",
   },
   {
-    id: 13,
+    id: 14,
     title: "Sertifikat Praktek Kerja Lapangan",
     org: "Dinas Komunikasi dan Informatika Kabupaten Klaten",
     date: "20 Juni 2022 – 24 September 2022",
@@ -131,7 +131,7 @@ const achievements = [
     category: "intern",
   },
   {
-    id: 14,
+    id: 15,
     title:
       "Sertifikat Panitia Kegiatan Goes to School #6 (Introduction and Basic Training on Arduino Microcontrollers) ",
     org: "Himpunan Mahasiswa Teknologi Komputer - Universitas Teknologi Digital Indonesia",
@@ -141,7 +141,7 @@ const achievements = [
     category: "organization",
   },
   {
-    id: 15,
+    id: 16,
     title:
       "Sertifikat Panitia Kegiatan Goes to School #7 (Let's Learn Future Technology with IoT) ",
     org: "Himpunan Mahasiswa Teknologi Komputer - Universitas Teknologi Digital Indonesia",
@@ -151,7 +151,7 @@ const achievements = [
     category: "organization",
   },
   {
-    id: 16,
+    id: 17,
     title:
       "Peserta Seminar Keamanan Siber di Era Digital Peluang dan Tantangan",
     org: "CyberHub - In Universitas Teknologi Digital Indonesia",
@@ -161,7 +161,7 @@ const achievements = [
     category: "webinar and seminar",
   },
   {
-    id: 17,
+    id: 18,
     title: "Peserta Seminar Peluang dan Resiko Keuangan Digital",
     org: "Universitas Teknologi Digital Indonesia",
     date: "Yogyakarta, 25 may 2025",
@@ -170,7 +170,7 @@ const achievements = [
     category: "webinar and seminar",
   },
   {
-    id: 18,
+    id: 19,
     title:
       "Peserta Webinar How to Build a Strong Personal Branding on Linkedln",
     org: "TalentaHub - Indonesia",
@@ -180,7 +180,7 @@ const achievements = [
     category: "webinar and seminar",
   },
   {
-    id: 19,
+    id: 20,
     title: "Webinar Nasional Inovasi Smart City Berbasis IoT",
     org: "Program Studi S1 Teknik Informatika Universitas Sains",
     date: "25 September 2024",
@@ -189,7 +189,7 @@ const achievements = [
     category: "webinar and seminar",
   },
   {
-    id: 20,
+    id: 21,
     title: "Soft Skill Webinar 5 Project Management",
     org: "DBS Foundation Coding Camp 2024",
     date: "Bandung, 12 Juni 2024",
@@ -198,7 +198,7 @@ const achievements = [
     category: "webinar and seminar",
   },
   {
-    id: 21,
+    id: 22,
     title: "Soft Skill Webinar 7 Effective Communication",
     org: "DBS Foundation Coding Camp 2024",
     date: "Bandung, 26 Juni 2024",
