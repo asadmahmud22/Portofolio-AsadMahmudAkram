@@ -174,7 +174,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
         ))}
       </nav>
 
-      <div className="p-6 text-gray-400 text-xs">
+      <div className="p-6 text-gray-400 text-xs text-center">
         <div>COPYRIGHT © 2025</div>
         <div>As'ad Mahmud Akram. All rights reserved.</div>
       </div>
