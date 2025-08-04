@@ -156,7 +156,7 @@ const SidebarContent = ({ toggleLanguage, toggleTheme, language, isDarkMode }) =
           { to: "/about", label: "About", icon: User },
           { to: "/achievements", label: "Achievements", icon: Award },
           { to: "/projects", label: "Projects", icon: Briefcase },
-          { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+         
           
           { to: "/contact", label: "Contact", icon: Mail },
         ].map(({ to, label, icon: Icon }) => (
