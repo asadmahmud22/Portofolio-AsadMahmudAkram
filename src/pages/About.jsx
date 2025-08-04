@@ -20,7 +20,7 @@ const About = () => {
   const education = [
     {
       institution: "Universitas Teknologi Digital Indonesia",
-      degree: "Diploma, Teknologi Komputer · GPA 3.79/4.00",
+      degree: "Diploma, Teknologi Komputer · GPA 3.80/4.00",
       period: "2023 - 2026",
       location: "Bantul, Daerah Istimewa Yogyakarta",
       logo: "/assets/utdi-logo.png",
